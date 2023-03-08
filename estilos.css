@@ -139,12 +139,14 @@ section#proyectos h2 {
   max-width: 100%;
   border: none;
   border-radius: 10px;
-}
+  transition: transform 0.5s ease;
+  }
 
 .proyecto img:hover {
+  transform: scale(1.05);
   filter: blur(3px);
-  transition: filter 0.5s ease;
 }
+
 
 
 .proyecto h2, .proyecto h3 {
