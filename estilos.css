@@ -238,6 +238,90 @@ input[type=submit]:hover {
   transform: scale(1.2);
 }
 
+/* Para pantallas menores de 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  section#inicio p {
+    font-size: 1.5rem;
+  }
+  section#sobre-mi {
+    padding: 50px;
+  }
+  section#sobre-mi h2 {
+    font-size: 3rem;
+  }
+  section#sobre-mi img {
+    width: 40%;
+  }
+  section#proyectos {
+    padding: 20px;
+  }
+  .proyecto {
+    width: 250px;
+  }
+  .proyecto p {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  section#contacto {
+    padding: 20px;
+  }
+  label {
+    font-size: 1rem;
+  }
+  input, textarea {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+/* Para pantallas de más de 768px */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  section#inicio p {
+    font-size: 2rem;
+  }
+  section#sobre-mi {
+    padding: 100px;
+  }
+  section#sobre-mi h2 {
+    font-size: 4rem;
+  }
+  section#sobre-mi img {
+    width: 20%;
+  }
+  section#proyectos {
+    padding: 50px;
+  }
+  .proyecto {
+    width: 300px;
+  }
+  .proyecto p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  section#contacto {
+    padding: 50px;
+  }
+  label {
+    font-size: 1.2rem;
+  }
+  input, textarea {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
+
 /******Efecto glicht*************/
 
 h1,
