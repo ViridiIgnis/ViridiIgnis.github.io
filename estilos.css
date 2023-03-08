@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@ body {
   overflow-x: hidden;
   font-family: 'oswald', helvetica, arial, sans-serif;
   color: #ffffff
-
 }
 
 #container {
@@ -15,7 +13,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-
 }
 
 .box {
@@ -23,7 +20,32 @@ body {
   background: url(img/111.png) no-repeat center center fixed;
 }
 
-
+/*****Efecto h2***/
+h2 {
+  position: relative;
+  font-size: 3rem;
+  color: transparent;
+  }
+  h2::before {
+      content: attr(data-text);
+      position: absolute;
+      color: white;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid #ffffff;
+      animation: animate 8s linear infinite;
+      filter: drop-shadow(0 0 20px #f507cd)drop-shadow(0 0 50px #f507cd)
+  }
+  @keyframes animate {
+      0%,10%,100%{
+          width: 0;
+      }
+      70%,90%{
+          width: 100%;
+      }
+  }
+ 
 /* Estilos para el encabezado */
 header {
   background-color: none;
@@ -31,10 +53,8 @@ header {
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  
+  align-items: center; 
 }
-
 
 nav ul {
   display: flex;
@@ -51,11 +71,13 @@ nav li {
 nav a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
 }
 
 nav a:hover {
-  color: #ce05f7;
+  color: #f507cd;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Estilos para la sección de inicio */
@@ -88,9 +110,10 @@ section#sobre-mi {
   height: 70vh;
 }
 section#sobre-mi h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0;
 }
+
 section#sobre-mi p {
   font-size: 1.2rem;
   margin: 0;
@@ -101,7 +124,6 @@ section#sobre-mi img {
   height: auto;
   border-radius: 50%;
 }
-
 /* Estilos para la sección de proyectos */
 section#proyectos {
   background-color: none;
@@ -113,17 +135,6 @@ section#proyectos {
   text-align: center;
   position: relative; 
 }
-
-section#proyectos h2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin-top: -50px;
-  font-size: 2rem;
-  z-index: 1;
-}
-
 .proyecto {
   margin: 20px;
   width: 300px;
@@ -132,7 +143,6 @@ section#proyectos h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
 .proyecto img {
@@ -140,22 +150,27 @@ section#proyectos h2 {
   border: none;
   border-radius: 10px;
   transition: transform 0.5s ease;
-  }
+}
 
 .proyecto img:hover {
   transform: scale(1.05);
   filter: blur(3px);
 }
 
-
-
-.proyecto h2, .proyecto h3 {
-  font-size: 2rem;
-  margin: 20px 0;
-}
-
 .proyecto p {
   font-size: 1.2rem;
+  margin-top: 10px;
+  background-color: rgba(87, 85, 86, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease; 
+  transform: translateY(-300px);
+}
+
+.proyecto:hover p {
+  opacity: 1; 
 }
 
 .proyecto a {
@@ -200,7 +215,7 @@ input, textarea {
 }
 
 input[type=submit]:hover {
-  background-color: #ce05f7;
+  background-color: #f507cd;
 }
 
 .redes-sociales {
@@ -217,12 +232,11 @@ input[type=submit]:hover {
 }
 
 .redes-sociales a:hover {
-  color:#ce05f7;
-
+  color: #f507cd;
+  transform: scale(1.2);
 }
 
-
-/**Efecto glicht*/
+/******Efecto glicht*************/
 
 h1,
 h2 {
@@ -268,7 +282,7 @@ section {
 .layers::before {
   top: 10px;
   left: 15px;
-  color: #e0287d;
+  color: #f507cd;
 }
 
 .layers::after {
