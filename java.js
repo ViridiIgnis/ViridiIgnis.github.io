@@ -23,11 +23,11 @@ if (window.innerWidth > 768) {
     for (let i = 0; i < glitch.length; i++){
       glitch[i].style.left = Math.floor(Math.random()*document.body.clientWidth) + 'px';
       glitch[i].style.top = Math.floor(Math.random()*document.body.clientHeight) + 'px';
-      glitch[i].style.width = Math.floor(Math.random()*50) + 'px';
-      glitch[i].style.height = Math.floor(Math.random()*30) + 'px';
+      glitch[i].style.width = Math.floor(Math.random()*20) + 'px';
+      glitch[i].style.height = Math.floor(Math.random()*60) + 'px';
       glitch[i].style.backgroundPosition = Math.floor(Math.random()*10) + 'px';
     }
-  },500)
+  },400)
 }
 
 /*actualizar F5*/
