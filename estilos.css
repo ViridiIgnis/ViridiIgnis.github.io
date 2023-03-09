@@ -867,12 +867,12 @@ section {
 @media only screen and (max-width: 600px) {
   
   .hero {
-    font-size: 33px;
+    font-size: 2rem;
   }
   
   .layers::before,
   .layers::after {
-    font-size: 12px;
+    font-size: 2rem;
   }
 }
     
